@@ -18,7 +18,7 @@ st.markdown("""
 > _"La excelencia es el resultado de la práctica constante."_  
 """)
 
-DATA_PATH = "C:/Users/ivana/OneDrive/Documentos/App/data_filtrada.csv"  
+DATA_PATH = "https://drive.google.com/uc?export=download&id=1poG1oNGs8Y8ENZOpVAaiC2e5GvqpnZ5v"
 DATE_COLS_HINT = []                
 PRIMARY_TABLE = "data"
 APP_TITLE = "Analisis exploratorio de los datos"
@@ -64,7 +64,7 @@ else:
 
 
 
-DATA_PATH = "C:/Users/ivana/OneDrive/Documentos/App/data_filtrada_imputada.csv"  
+DATA_PATH = "https://drive.google.com/file/d/1mqsnq8rKjt1ZJsJ0GYyzx-kTPWUvFel4/view?usp=drive_link"  
 DATE_COLS_HINT = []                
 PRIMARY_TABLE = "data"
 APP_TITLE = "Analisis exploratorio de los datos"
@@ -326,3 +326,4 @@ if submit:
     prob = modelo.predict_proba(entrada_dummies)[0][1]  # Clase 1 = formal
 
     st.success(f"🔮 Probabilidad estimada de tener empleo formal: **{prob*100:.2f}%**")
+
