@@ -64,7 +64,8 @@ else:
 
 
 
-DATA_PATH = "https://drive.google.com/file/d/1mqsnq8rKjt1ZJsJ0GYyzx-kTPWUvFel4/view?usp=drive_link"  
+DATA_PATH ="https://drive.google.com/uc?export=download&id=1mqsnq8rKjt1ZJsJ0GYyzx-kTPWUvFel4"
+
 DATE_COLS_HINT = []                
 PRIMARY_TABLE = "data"
 APP_TITLE = "Analisis exploratorio de los datos"
@@ -327,6 +328,7 @@ if submit:
     prob = modelo.predict_proba(entrada_dummies)[0][1]  # Clase 1 = formal
 
     st.success(f"🔮 Probabilidad estimada de tener empleo formal: **{prob*100:.2f}%**")
+
 
 
 
