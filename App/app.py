@@ -73,11 +73,12 @@ st.set_page_config(page_title="Analisis exploratorio de datos", layout="wide")
 
 # -------- CARGA DEL DATASET FIJO --------
 @st.cache_data
-def cargar_datos():
-    df2 = pd.read_csv(DATA_PATH)
+def cargar_dataset_filtrado():
+    return pd.read_csv("https://drive.google.com/uc?export=download&id=1mqsnq8rKjt1ZJsJ0GYyzx-kTPWUvFel4")
+
     return df2
 
-df2 = cargar_datos()
+df2 = cargar_dataset_filtrado()
 
 
 mapeo_formalidad = {0: 'Informal', 1: 'Formal'}
@@ -328,6 +329,7 @@ if submit:
     prob = modelo.predict_proba(entrada_dummies)[0][1]  # Clase 1 = formal
 
     st.success(f"🔮 Probabilidad estimada de tener empleo formal: **{prob*100:.2f}%**")
+
 
 
 
