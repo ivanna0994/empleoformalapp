@@ -77,6 +77,7 @@ def cargar_datos():
     return df2
 
 df2 = cargar_datos()
+return pd.read_csv(DATA_PATH, sep=';', encoding='utf-8', error_bad_lines=False, engine='python')
 
 mapeo_formalidad = {0: 'Informal', 1: 'Formal'}
 datos = df2
@@ -326,4 +327,5 @@ if submit:
     prob = modelo.predict_proba(entrada_dummies)[0][1]  # Clase 1 = formal
 
     st.success(f"🔮 Probabilidad estimada de tener empleo formal: **{prob*100:.2f}%**")
+
 
